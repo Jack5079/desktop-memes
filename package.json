@@ -22,6 +22,18 @@
       "packagerConfig": {
         "icon": "./src/icon.png"
       },
+      "publishers": [
+        {
+          "name": "@electron-forge/publisher-github",
+          "config": {
+            "repository": {
+              "owner": "Jack5079",
+              "name": "desktop-memes"
+            },
+            "prerelease": false
+          }
+        }
+      ],
       "makers": [
         {
           "name": "@electron-forge/maker-squirrel",
