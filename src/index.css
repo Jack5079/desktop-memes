@@ -1,43 +1,34 @@
-#titlebar {
-  top: 0;
-  left: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  position: fixed;
-  width: calc(100% - 2px);
-  /*Compensate for body 1px border*/
-  backdrop-filter: brightness(50%);
-  color: white;
-  border-bottom-right-radius: 1em;
-  border-bottom-left-radius: 1em;
-  text-align: center;
-}
-
-#drag-region {
+body {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
   -webkit-app-region: drag;
 }
 
-#drag-region, #close-buttons {
-  display: inline-block;
+* {
+  -webkit-app-region: drag;
 }
 
-#close-buttons {
-  user-select: none;
-  margin-right: 1em;
-  float: right;
-  text-align: right;
+input {
+  -webkit-app-region: no-drag;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background: transparent;
+  border: 0;
+  -webkit-text-stroke: black;
+  color: white;
+  text-transform: uppercase;
+  font-size: calc((5vh + 5vw) / 2);
+  width: 100%;
+  z-index: 10;
+  text-align: center;
 }
 
-#close-buttons>*:hover {
-  background: rgba(0, 0, 0, 0.1)
+#b {
+  position: fixed;
+  bottom: 0;
 }
 
-#close-buttons>* {
-  padding: 3px;
-}
-
-body {
-  margin: 2em;
-  background: url(beagle.png);
-  background-size: cover;
-  height: 100vh;
+#t {
+  position: fixed;
+  top: 0;
 }

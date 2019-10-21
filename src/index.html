@@ -8,17 +8,18 @@
   </head>
 
   <body>
-    <header id="titlebar">
+    <!-- <header id="titlebar">
       <div id="drag-region">
         <span>jackapp</span>
       </div>
       <div id="close-buttons">
         <span id="close">X</span>
       </div>
-    </header>
+    </header> -->
 
-    <h1>💖 Hello World! or not...</h1>
-    <p>Welcome to your Electron application.</p>
+    <input type="text" id="t" placeholder="TOP TEXT">
+    <div id="back" width="100vw" height="100vh"></div>
+    <input type="text" id="b" placeholder="BOTTOM TEXT">
     <script defer>
       const { remote } = require('electron')
       // todo: add stuff
