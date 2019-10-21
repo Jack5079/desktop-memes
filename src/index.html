@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <meta charset="UTF-8">
     <title>Hello World!</title>
     <link rel="stylesheet" href="index.css">
   </head>
+
   <body>
-    <h1>💖 Hello World!</h1>
+    <header id="titlebar">
+      <div id="drag-region">
+        <span>jackapp</span>
+      </div>
+      <div id="close-buttons">
+        <span id="close">X</span>
+      </div>
+    </header>
+
+    <h1>💖 Hello World! or not...</h1>
     <p>Welcome to your Electron application.</p>
+    <script defer>
+      const { remote } = require('electron')
+      // todo: add stuff
+      document.querySelector('#close').addEventListener('click', e => {
+        var window = remote.getCurrentWindow();
+        window.close();
+      })
+
+    </script>
   </body>
+
 </html>
